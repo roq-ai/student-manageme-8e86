@@ -1,0 +1,28 @@
+import { SchoolInterface } from 'interfaces/school';
+import { TeacherInterface } from 'interfaces/teacher';
+import { GetQueryInterface } from 'interfaces';
+
+export interface CourseInterface {
+  id?: string;
+  school_id: string;
+  teacher_id: string;
+  name: string;
+  description?: string;
+  start_date: any;
+  end_date: any;
+  credits: number;
+  created_at?: any;
+  updated_at?: any;
+
+  school?: SchoolInterface;
+  teacher?: TeacherInterface;
+  _count?: {};
+}
+
+export interface CourseGetQueryInterface extends GetQueryInterface {
+  id?: string;
+  school_id?: string;
+  teacher_id?: string;
+  name?: string;
+  description?: string;
+}
